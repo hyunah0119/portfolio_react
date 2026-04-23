@@ -1,4 +1,6 @@
-export default function Header() {
+import ThemeToggleBtn from "./FloatingBtn";
+
+export default function Header({ isDark }) {
     const navList = [
         {
             id: 1,
@@ -28,12 +30,11 @@ export default function Header() {
     ];
 
     return (
-        <header className="h-15 flex justify-between items-center">
-            <div>
-                HYNA's Portfolio
-            </div>
+        <header className="h-15 flex justify-between items-center sm:px-7.5 px-4 font-pretendard dark:text-[#EDE4D0]">
+            <a href="#home" className="font-bold text-[18px] sm:text-2xl">HYNA's Portfolio</a>
 
-            <ul className="hidden sm:flex">
+            {/* PC 버전 */}
+            <ul className="hidden sm:flex sm:items-center sm:gap-8 sm:text-[18px]">
                 {navList.map(list => {
                     return (
                     <li key={list.id}>
@@ -42,6 +43,8 @@ export default function Header() {
                     )
                 })}
             </ul>
+
+            {/* Mobile 버전 */}
         </header>
     )
 }
