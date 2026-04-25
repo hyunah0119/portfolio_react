@@ -47,3 +47,28 @@
     --font-gmarket: "GMarketSans", sans-serif;
     --font-pretendard: "Pretendard", sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* swiper */
+.work-swiper .swiper-wrapper {
+    padding-bottom: 50px !important;
+}
+
+.modal-swiper .swiper-wrapper {
+    padding-bottom: 35px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #FFA9A3 !important;
+}
+
+.dark .swiper-pagination-bullet {
+    background: #eee !important;
+}
+
+.dark .swiper-pagination-bullet-active {
+    background: #F5D96B !important;
+}
