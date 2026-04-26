@@ -1,10 +1,12 @@
 import Header from './components/Header'
 import Hero from './sections/Hero';
+import AboutMe from './sections/AboutMe';
+import WorkExperience from './sections/WorkExperience';
+import Projects from './sections/Projects';
+import Skills from './sections/Skills';
 import FloatingActions from './components/FloatingActions';
 import SectionWrapper from './components/SectionWrapper';
 import SectionTitle from './components/SectionTitle';
-import AboutMe from './sections/AboutMe';
-import WorkExperience from './sections/WorkExperience';
 import './App.css'
 import { useEffect, useState } from 'react'
 
@@ -55,10 +57,14 @@ function App() {
         </SectionWrapper>
 
         {/* project */}
-        <SectionWrapper variant='white' subTitle='PROJECT' id='project'></SectionWrapper>
+        <SectionWrapper variant='white' subTitle='PROJECT' id='project'>
+          <Projects />
+        </SectionWrapper>
 
         {/* skill */}
-        <SectionWrapper variant='yellow' subTitle='SKILL' id='skill'></SectionWrapper>
+        <SectionWrapper variant='yellow' subTitle='SKILL' id='skill'>
+          <Skills />
+        </SectionWrapper>
 
         {/* contact */}
         <SectionWrapper variant='white' subTitle='CONTACT' id='contact'></SectionWrapper>

@@ -35,9 +35,9 @@ import workDetail06_1 from '../assets/img/work/work06-1.png'
 import workDetail06_2 from '../assets/img/work/work06-2.png'
 
 import workDetail07_1 from '../assets/img/work/work07-1.png'
-import workDetail07_2 from '../assets/img/work/work07-1.png'
-import workDetail07_3 from '../assets/img/work/work07-1.png'
-import workDetail07_4 from '../assets/img/work/work07-1.png'
+import workDetail07_2 from '../assets/img/work/work07-2.png'
+import workDetail07_3 from '../assets/img/work/work07-3.png'
+import workDetail07_4 from '../assets/img/work/work07-4.png'
 
 export const workList = [
     {
@@ -68,7 +68,7 @@ export const workList = [
                 }
             ],
             info : [
-                'JSP &amp; React 기반 분양/브랜드 웹사이트 화면 개발 및 운영',
+                'JSP·React 기반 분양/브랜드 웹사이트 화면 개발 및 운영',
                 'HTML/CSS(SCSS)/JavaScript/TypeScript 기반 UI 구현',
                 '아파트 단지별 랜딩/홍보 페이지 템플릿 제작 및 신규 페이지 구축',
                 '공통 include 구조(JSP) 및 React 컴포넌트 모듈화 설계로 재사용성 향상',

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import WorkCardItem from "./WorkCardItem";
 import WorkModal from "./WorkModal";
 import { workList } from "../data/workList";
@@ -7,7 +8,40 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-export default function WorkCardList({ selectWork }) {
+export default function WorkCardList({ onClick, onModalClose }) {
+    const [selectWorkCard, setSelectWorkCard] = useState();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Modal 열렸을 때 body 스크롤 잠금
+    useEffect(() => {
+        const body = document.body;
+
+        if(isModalOpen) {
+            body.style.overflow = 'hidden'
+            body.style.touchAction = 'none'
+        } else {
+            body.style.overflow = ''
+            body.style.touchAction = ''
+        }
+
+        return () => {
+            body.style.overflow = ''
+            body.style.touchAction = ''
+        }
+    }, [isModalOpen]);
+
+    // 선택된 card값 가져오기 && Modal Open
+    const handleWorkCard = (item) => {
+        setSelectWorkCard(item)
+        setIsModalOpen(true)
+    }
+
+    // Modal Close
+    const handleModalClose = () => {
+        setIsModalOpen(false);
+        setSelectWorkCard();
+    }
+
     return (
         <>
             {/* PC */}
@@ -18,6 +52,7 @@ export default function WorkCardList({ selectWork }) {
                         src={item.thumb}
                         alt={item.title}
                         title={item.title}
+                        onClick={() => handleWorkCard(item)}
                     />
                 ))}
             </div>
@@ -39,6 +74,7 @@ export default function WorkCardList({ selectWork }) {
                                 src={item.thumb}
                                 alt={item.title}
                                 title={item.title}
+                                onClick={() => handleWorkCard(item)}
                             />
                         </SwiperSlide>
                     ))}
@@ -47,7 +83,9 @@ export default function WorkCardList({ selectWork }) {
 
             {/* Modal */}
             <WorkModal 
-                selectWork={selectWork}
+                selectWorkCard={selectWorkCard}
+                isModalOpen={isModalOpen}
+                onModalClose={handleModalClose}
             />
         </>
     )
