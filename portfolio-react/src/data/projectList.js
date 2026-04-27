@@ -22,7 +22,7 @@ export const projectList = [
             }
         ],
         liveURL : 'https://portfolio-react-dfr7.vercel.app/',
-        githubURL : 'https://github.com/hyunah0119/portfolio_react'
+        githubURL : 'https://github.com/hyunah0119/portfolio_react/tree/main/portfolio-react'
     },
     {
         id : 2,
