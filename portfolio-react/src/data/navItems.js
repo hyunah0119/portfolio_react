@@ -18,10 +18,5 @@ export const navItems = [
         id: 4,
         title: 'SKILL',
         link: '#skill'
-    },
-    {
-        id: 5,
-        title: 'CONTACT',
-        link: '#contact'
     }
 ];

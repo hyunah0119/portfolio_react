@@ -45,7 +45,7 @@ export default function WorkCardList({ onClick, onModalClose }) {
     return (
         <>
             {/* PC */}
-            <div className="hidden sm:grid grid-cols-3 gap-10">
+            <div className="hidden sm:grid xl:grid-cols-3 md:grid-cols-2 gap-10">
                 {workList.map(item => (
                     <WorkCardItem
                         key={item.id}

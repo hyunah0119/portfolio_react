@@ -3,8 +3,8 @@ import Link from "./Link";
 export default function ProjectItem({ title, info, src, detail, liveURL, githubURL }) {
     return (
         <div className="flex flex-col sm:flex-row gap-10 mb-10 last:mb-0">
-            <div className="w-full sm:w-75 h-75 border border-[#E6E2DD] rounded-[10px]">
-                <img src={src} alt={`${title} 썸네일`} className="rounded-[10px]" />
+            <div className="w-full sm:w-75 h-75 rounded-[10px]">
+                <img src={src} alt={`${title} 썸네일`} className="rounded-[10px] border border-[#E6E2DD]" />
             </div>
 
             <div className="flex flex-col justify-between">

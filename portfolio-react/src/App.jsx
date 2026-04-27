@@ -1,4 +1,3 @@
-import Header from './components/Header'
 import Hero from './sections/Hero';
 import AboutMe from './sections/AboutMe';
 import WorkExperience from './sections/WorkExperience';
@@ -7,6 +6,7 @@ import Skills from './sections/Skills';
 import FloatingActions from './components/FloatingActions';
 import SectionWrapper from './components/SectionWrapper';
 import SectionTitle from './components/SectionTitle';
+import Footer from './components/Footer';
 import './App.css'
 import { useEffect, useState } from 'react'
 
@@ -41,10 +41,7 @@ function App() {
     <div className={`text-[#333] font-pretendard scroll-smooth ${isDark ? 'dark' : ''}`} id='home'>
       <main className='relative w-full h-full scroll-smooth'>
         {/* Hero */}
-        <section className='bg-[#FFF2B2] dark:bg-[#2F2818]'>
-          <Header isScroll={isScroll} />
-          <Hero />
-        </section>
+        <Hero isScroll={isScroll} />
 
         {/* about me */}
         <SectionWrapper variant='white' subTitle='ABOUT ME' id='about'>
@@ -66,14 +63,8 @@ function App() {
           <Skills />
         </SectionWrapper>
 
-        {/* contact */}
-        <SectionWrapper variant='white' subTitle='CONTACT' id='contact'></SectionWrapper>
-
         {/* footer */}
-        <section className='bg-[#E6E2DD] dark:bg-[#24211D] dark:text-[#D8D1C7]'>
-          Designed & Developed by HYNA <br/>
-          © 2026 HYNA Portfolio. All rights reserved.
-        </section>
+        <Footer />
 
         <FloatingActions 
           isDark={isDark} 

@@ -6,16 +6,18 @@ export const projectList = [
     {
         id : 1,
         thumb : project01,
-        title : '반응형 페이지',
-        info : `디자인부터 HTML·CSS 퍼블리싱까지 100% 직접 제작한 반응형 포트폴리오 사이트입니다.\nPC / Tablet / Mobile 반응형으로 구현되었으며, 밝고 직관적인 UI를 목표로 제작했습니다.`,
+        title : '개인 포트폴리오 사이트 리뉴얼',
+        info : `기존 HTML/CSS 기반 포트폴리오 사이트를 React + Vite 환경으로 리뉴얼한 반응형 웹사이트입니다.\nTailwind CSS를 활용해 UI 생산성과 일관성을 높였으며, 컴포넌트 단위 구조 설계, 데이터 기반 렌더링, 유지보수를 고려한 구조로 개선했습니다.`,
         detail : [
             {
                 title : '주요기능',
                 explain : [
-                    'Sticky header (모바일 햄버거 메뉴)',
-                    '반응형 Swiper 슬라이더',
-                    '서비스 카드 Hover 효과',
-                    '미디어 쿼리를 통한 디바이스 대응'
+                    '반응형 레이아웃 (PC / Tablet / Mobile 대응)',
+                    '다크모드 / 라이트모드 전환',
+                    '컴포넌트 단위 UI 구성 및 재사용성 고려',
+                    '프로젝트 데이터 연동 및 동적 렌더링',
+                    'Sticky Header 및 모바일 메뉴 인터랙션',
+                    '유지보수를 고려한 폴더 구조 설계'
                 ]
             }
         ],
