@@ -1,18 +1,21 @@
-# React + Vite
+# 개인 포트폴리오 사이트 리뉴얼
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+기존 HTML/CSS 기반 포트폴리오 사이트를 React + Vite 환경으로 리뉴얼한 반응형 웹사이트입니다.
 
-Currently, two official plugins are available:
+Tailwind CSS를 활용해 UI 생산성과 일관성을 높였으며, 컴포넌트 단위 구조 설계, 데이터 기반 렌더링, 유지보수를 고려한 구조로 개선했습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 주요 기능
 
-## React Compiler
+- 반응형 레이아웃 (PC / Tablet / Mobile 대응)
+- 다크모드 / 라이트모드 전환
+- 컴포넌트 단위 UI 구성 및 재사용성 고려
+- 프로젝트 데이터 연동 및 동적 렌더링
+- Sticky Header 및 모바일 메뉴 인터랙션
+- 유지보수를 고려한 폴더 구조 설계
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 기술 스택
 
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- JavaScript
+- Tailwind CSS
