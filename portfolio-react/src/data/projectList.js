@@ -1,10 +1,30 @@
 import project01 from '../assets/img/project/project01.png';
 import project02 from '../assets/img/project/project02.png';
 import project03 from '../assets/img/project/project03.png';
+import project04 from '../assets/img/project/project04.png';
 
 export const projectList = [
     {
         id : 1,
+        thumb : project04,
+        title : '개인 포트폴리오 반응형 페이지 (HTML)',
+        info : `디자인부터 HTML·CSS 퍼블리싱까지 100% 직접 제작한 반응형 포트폴리오 사이트입니다.\nPC / Tablet / Mobile 반응형으로 구현되었으며, 밝고 직관적인 UI를 목표로 제작했습니다.`,
+        detail : [
+            {
+                title : '주요기능',
+                explain : [
+                    'Sticky header (모바일 햄버거 메뉴)',
+                    '반응형 Swiper 슬라이더',
+                    '서비스 카드 Hover 효과',
+                    '미디어 쿼리를 통한 디바이스 대응',
+                ]
+            }
+        ],
+        liveURL : 'https://hyna-portfolio.vercel.app/',
+        githubURL : 'https://github.com/hyunah0119/hyna.portfolio'
+    },
+    {
+        id : 2,
         thumb : project01,
         title : '개인 포트폴리오 사이트 리뉴얼',
         info : `기존 HTML/CSS 기반 포트폴리오 사이트를 React + Vite 환경으로 리뉴얼한 반응형 웹사이트입니다.\nTailwind CSS를 활용해 UI 생산성과 일관성을 높였으며, 컴포넌트 단위 구조 설계, 데이터 기반 렌더링, 유지보수를 고려한 구조로 개선했습니다.`,
@@ -25,7 +45,7 @@ export const projectList = [
         githubURL : 'https://github.com/hyunah0119/portfolio_react/tree/main/portfolio-react'
     },
     {
-        id : 2,
+        id : 3,
         thumb : project02,
         title : 'UI 컴포넌트 모음',
         info : `실무 중 자주 쓰는 컴포넌트를 정리하여 재상용성을 높이기 위한 개인 프로젝트입니다.\nReact + Styled-components + TypeScript를 사용했으며, PC 환경에 맞춰 작업했습니다.`,
@@ -44,7 +64,7 @@ export const projectList = [
         githubURL : 'https://github.com/hyunah0119/hyna.project02'
     },
     {
-        id : 3,
+        id : 4,
         thumb : project03,
         title : '투두리스트',
         info : `React + TypeScript + SCSS 기반으로 제작한 SPA 형태의 Todo 관리 애플리케이션입니다.\n단순 UI 구현을 넘어, 상태 관리 구조 설계와 컴포넌트 분리를 중심으로 개발한 프로젝트입니다.`,
