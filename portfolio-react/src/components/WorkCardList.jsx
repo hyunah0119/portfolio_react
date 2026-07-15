@@ -1,6 +1,10 @@
+import WorkAccordion from "./WorkAccordion"
+
 const WorkCardList = () => {
   return (
-    <div>WorkCardList</div>
+    <div className="flex justify-center">
+      <WorkAccordion />
+    </div>
   )
 }
 
