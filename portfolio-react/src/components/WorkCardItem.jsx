@@ -7,7 +7,7 @@ export default function WorkCardItem({ src, alt, title, onClick }) {
             <img src={src} alt={alt} className="rounded-tl-[20px] rounded-tr-[20px]" />
 
             <div className="p-5 border-t border-[#E6E2DD]">
-                <p className="text-base sm:text-lg font-medium text-center">{title}</p>
+              <p className="text-base sm:text-lg font-medium text-center">{title}</p>
             </div>
         </div>
     )
