@@ -7,10 +7,10 @@ export default function AboutMe() {
       <>
         <div className='flex flex-col sm:flex-row justify-between items-center w-full'>
           <div className='w-full sm:w-[50%] flex justify-center items-center'>
-            <div className='w-[55%] sm:w-80 h-[55%] sm:h-80 bg-[#FFA9A3] dark:bg-[#C46C66] 
+            <div className='w-[50%] sm:w-80 h-[50%] sm:h-80 bg-[#FFA9A3] dark:bg-[#C46C66] 
               flex justify-center items-center
               rounded-full shadow-[0_6px_20px_rgba(0,0,0,0.25),0_2px_6px_rgba(0,0,0,0.05)]'>
-              <img src={profileImg} alt='프로필 이미지' className='w-[80%]' />
+              <img src={profileImg} alt='프로필 이미지' className='w-full sm:w-[80%]' />
             </div>
           </div>
           

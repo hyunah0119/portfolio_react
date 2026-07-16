@@ -20,7 +20,7 @@ const AboutMeCardList = () => {
 
         <AboutMeCard
           title={'유지보수 가능한 코드'}
-          item={'TypeScript · Component Design · Custom Hooks'}
+          item={'TypeScript · Component Architecture · Custom Hooks'}
           text={'컴포넌트 분리와 Custom Hooks, TypeScript 기반의 타입 설계를 통해 재사용성과 유지보수성을 고려한 코드를 작성합니다.'}
         >
           <HiOutlineCodeBracket className="text-4xl" />
