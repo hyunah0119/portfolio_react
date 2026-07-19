@@ -1,21 +1,12 @@
-import ProjectItem from "./ProjectItem";
-import { projectList } from "../data/projectList";
+import ProjectItems from "./ProjectItems"
+import { projectLists } from "../data/projectList"
 
 export default function ProjectList() {
-    return (
-        <div>
-            {projectList.map(list => (
-                <ProjectItem 
-                    key={list.id} 
-                    title={list.title}
-                    src={list.thumb}
-                    alt={list.title}
-                    info={list.info}
-                    detail={list.detail}
-                    liveURL={list.liveURL}
-                    githubURL={list.githubURL}
-                />
-            ))}
-        </div>
-    )
+  return (
+    <div>
+      {projectLists.map((project) => (
+        <ProjectItems key={project.id} project={project} />
+      ))}
+    </div>
+  )
 }

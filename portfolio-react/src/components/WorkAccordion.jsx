@@ -60,7 +60,7 @@ const WorkAccordion = ({ isOpen, onClick, item }) => {
                 </div>
               </div>
               
-              <div className="w-full sm:w-[60%] border-l border-[#e5e5e5] dark:border-[#4a4a4a]">
+              <div className="w-full sm:w-[60%] border-t sm:border-t-0 sm:border-l border-[#e5e5e5] dark:border-[#4a4a4a] pt-5 px-0 sm:pt-0 sm:px-4">
                 <div className="px-4">
                   <h5 className={titleClass}>| 프로젝트 개요</h5>
                   <p className={`${subTitleClass} whitespace-pre-line`}>{item.summary}</p>
