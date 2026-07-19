@@ -21,10 +21,12 @@ const WorkAccordion = ({ isOpen, onClick, item }) => {
         <div>
           <p className="font-bold text-base sm:text-xl">{item.title}</p>
 
-          <p className="mt-1 font-medium text-sm sm:text-base text-gray-500 dark:text-gray-400">{item.description}</p>
+          <p className="mt-1 font-medium text-sm sm:text-base text-gray-500 dark:text-gray-400 break-keep">{item.description}</p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 text-gray-400 mt-2.5">
-            <span className="text-sm font-medium">{item.technologies.join(' · ')}</span>
+            <span className="text-sm font-medium">
+              {`${item.technologies.slice(0, 3).join(' · ')}${item.technologies.length > 3 ? ` +${item.technologies.length - 3}` : ''}`}
+            </span>
             <span className="hidden sm:block">|</span>
             <span className="block text-sm font-light">{item.date}</span>
           </div>
@@ -61,7 +63,7 @@ const WorkAccordion = ({ isOpen, onClick, item }) => {
               <div className="w-full sm:w-[60%] border-l border-[#e5e5e5] dark:border-[#4a4a4a]">
                 <div className="px-4">
                   <h5 className={titleClass}>| 프로젝트 개요</h5>
-                  <p className={subTitleClass}>{item.summary}</p>
+                  <p className={`${subTitleClass} whitespace-pre-line`}>{item.summary}</p>
                 </div>
     
                 <div className="mt-7.5 px-4">
@@ -77,14 +79,17 @@ const WorkAccordion = ({ isOpen, onClick, item }) => {
                   <h5 className={titleClass}>| 주요 기여</h5>
                   <ul className={`${subTitleClass} list-disc list-inside pl-1`}>
                     {item.contributions.map((contribution, index) => (
-                      <li key={index}>{contribution}</li>
+                      <li
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: contribution }}
+                      />
                     ))}
                   </ul>
                 </div>
 
                 <div className="mt-7.5 px-4">
                   <h5 className={titleClass}>| 기술 스택</h5>
-                  <ul className={`${subTitleClass} flex items-center gap-2`}>
+                  <ul className={`${subTitleClass} flex flex-wrap items-center gap-2`}>
                     {item.technologies.map((technology, index) => (
                       <li key={index} className="text-sm font-medium bg-[#FFA9A3] text-white px-3 py-1 rounded-md">{technology}</li>
                     ))}
@@ -94,7 +99,7 @@ const WorkAccordion = ({ isOpen, onClick, item }) => {
                 {item.links.length > 0 && (
                   <div className="mt-7.5 px-4">
                     <h5 className={titleClass}>| 사이트 바로가기</h5>
-                    <div className={`${subTitleClass} pl-1 flex items-center gap-3`}>
+                    <div className={`${subTitleClass} pl-1 flex flex-wrap items-center gap-x-3 gap-y-1`}>
                       {item.links.map((link, index) => (
                         <a key={index} href={link.url} 
                           target="_blank" 
